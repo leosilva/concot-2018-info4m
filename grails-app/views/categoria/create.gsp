@@ -25,9 +25,11 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form resource="${this.categoria}" method="POST">
+            <g:form controller="categoria" action="save" method="POST">
                 <fieldset class="form">
-                    <f:all bean="categoria"/>
+                    <!--<f:all bean="categoria"/>-->
+                    <label>Nome: </label>
+                    <g:textField name="nome" />
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />

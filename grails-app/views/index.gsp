@@ -62,6 +62,7 @@
 
             <div id="controllers" role="navigation">
                 <h2>Available Controllers:</h2>
+                ${teste}
                 <ul>
                     <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
                         <li class="controller">

@@ -13,6 +13,13 @@
                 <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
+        <g:each in="${listaCategorias}">
+            <p style="color: blue; background-color: yellow;">
+                <g:link action="create" controller="categoria">${it.nome}</g:link>
+                <g:createLink action="create" controller="item" />
+            </p>
+        </g:each>
+
         <div id="list-categoria" class="content scaffold-list" role="main">
             <h1><g:message code="default.list.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
