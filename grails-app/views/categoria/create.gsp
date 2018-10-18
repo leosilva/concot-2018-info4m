@@ -28,7 +28,9 @@
             <g:form controller="categoria" action="save" method="POST">
                 <fieldset class="form">
                     <!--<f:all bean="categoria"/>-->
-                    <label>Nome: </label>
+                    <label>
+                        <g:message code="Categoria.nome.label" args="['C1']"/>
+                    </label>
                     <g:textField name="nome" />
                 </fieldset>
                 <fieldset class="buttons">

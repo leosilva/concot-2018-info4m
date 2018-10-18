@@ -10,16 +10,8 @@ class CategoriaController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        def lista = []
-        lista += new Categoria(nome: "Categoria 1", id: 1)
-        lista += new Categoria(nome: "Categoria 2", id: 2)
-        lista += new Categoria(nome: "Categoria 3", id: 3)
-        lista += new Categoria(nome: "Categoria 4", id: 4)
-        lista += new Categoria(nome: "Categoria 5", id: 5)
         params.max = Math.min(max ?: 10, 100)
-        respond categoriaService.list(params),
-                model:[categoriaCount: categoriaService.count(),
-                       listaCategorias: lista]
+        respond categoriaService.list(params), model:[categoriaCount: categoriaService.count()]
     }
 
     def show(Long id) {
@@ -104,4 +96,5 @@ class CategoriaController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
 }
