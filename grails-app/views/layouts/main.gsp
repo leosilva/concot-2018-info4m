@@ -9,42 +9,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
 
-    <asset:stylesheet src="application.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+    <asset:stylesheet src="bootstrap.min.css" />
+    <asset:stylesheet src="owl.theme.default.min.css" />
+    <asset:stylesheet src="css/font-awesome.min.css" />
+    <asset:stylesheet src="animate/owl.theme.default.min.css" />
+    <asset:stylesheet src="modal-video.min.css" />
+    <asset:stylesheet src="style.css"/>
 
     <g:layoutHead/>
 </head>
 <body>
 
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/#">
-		    <asset:image src="grails.svg" alt="Grails Logo"/>
-                </a>
-            </div>
-            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
-                <ul class="nav navbar-nav navbar-right">
-                    <g:pageProperty name="page.nav" />
-                </ul>
-            </div>
-        </div>
-    </div>
+    <g:render template="templates/header"/>
 
     <g:layoutBody/>
 
-    <div class="footer" role="contentinfo"></div>
+    <g:render template="templates/aboutus"/>
+    <g:render template="templates/features"/>
 
-    <div id="spinner" class="spinner" style="display:none;">
-        <g:message code="spinner.alt" default="Loading&hellip;"/>
-    </div>
-
-    <asset:javascript src="application.js"/>
+    <asset:javascript src="jquery.min.js" />
+    <asset:javascript src="jquery-migrate.min.js" />
+    <asset:javascript src="bootstrap.bundle.min.js" />
+    <asset:javascript src="hoverIntent.js" />
+    <asset:javascript src="superfish.min.js" />
+    <asset:javascript src="easing/easing.min.js" />
+    <asset:javascript src="modal-video.min.js" />
+    <asset:javascript src="owl.carousel.min.js"/>
+    <asset:javascript src="wow.min.js"/>
+    <asset:javascript src="contactform.js"/>
+    <asset:javascript src="main.js"/>
 
 </body>
 </html>
